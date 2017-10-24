@@ -7,15 +7,32 @@ import android.support.v7.app.AppCompatActivity;
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class SplashActivity extends AppCompatActivity {
+/**
+ * This activity loads a 3-second splash screen before loading <code>MusicActivity</code>.
+ *
+ * @author Derek Tran
+ * @version 1.0
+ * @since October 24, 2017
+ */
+public class SplashActivity extends AppCompatActivity
+{
 
+    /**
+     * Initializes <code>SplashActivity</code> by inflating its UI and loading a TimerTask.
+     *
+     * @param savedInstanceState Bundle containing the data it recently supplied in
+     *                           onSaveInstanceState(Bundle) if activity was reinitialized after
+     *                           being previously shut down. Otherwise it is null.
+     */
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
         // Create a TimerTask to defer the loading of MusicActivity by 3 seconds
-        TimerTask timerTask = new TimerTask() {
+        TimerTask timerTask = new TimerTask()
+        {
             @Override
             public void run()
             {

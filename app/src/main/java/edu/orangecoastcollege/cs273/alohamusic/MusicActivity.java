@@ -10,6 +10,14 @@ import android.widget.Button;
 import android.widget.MediaController;
 import android.widget.VideoView;
 
+/**
+ * This activity allows the user to listen to a ukulele and an ipu and to watch a hula video. Each
+ * media can be played and paused with their respective buttons.
+ *
+ * @author Derek Tran
+ * @version 1.0
+ * @since October 24, 2017
+ */
 public class MusicActivity extends AppCompatActivity
 {
     // References to UI components
@@ -22,6 +30,13 @@ public class MusicActivity extends AppCompatActivity
     MediaPlayer ukuleleMediaPlayer;
     MediaPlayer ipuMediaPlayer;
 
+    /**
+     * Initializes <code>MusicActivity</code> by inflating its UI.
+     *
+     * @param savedInstanceState Bundle containing the data it recently supplied in
+     *                           onSaveInstanceState(Bundle) if activity was reinitialized after
+     *                           being previously shut down. Otherwise it is null.
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -47,6 +62,12 @@ public class MusicActivity extends AppCompatActivity
     }
 
     // Method will handle all 3 button clicks
+
+    /**
+     * Plays and pauses the media that was clicked.
+     *
+     * @param v The view that called this method.
+     */
     public void playMedia(View v)
     {
         // Make a decision based on the id of the view
@@ -120,6 +141,9 @@ public class MusicActivity extends AppCompatActivity
     // Override onStop method to release MediaPlayer
     // Prevent memory leaks
 
+    /**
+     * Releases the MediaPlayer objects once this activity is no longer visible.
+     */
     @Override
     protected void onStop()
     {

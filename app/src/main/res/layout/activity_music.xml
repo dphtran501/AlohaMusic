@@ -9,7 +9,6 @@
     tools:context="edu.orangecoastcollege.cs273.alohamusic.MusicActivity">
 
     <ImageView
-        android:id="@+id/ukuleleImageView"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_weight="1"
@@ -21,11 +20,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/turquoise_water"
+        android:onClick="playMedia"
+        android:text="@string/ukulele_button_play_text"
         android:textColor="@android:color/white"
-        tools:text="@string/ukulele_button_play_text"/>
+        />
 
     <ImageView
-        android:id="@+id/ipuImageView"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_weight="1"
@@ -37,13 +37,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/turquoise_water"
-        android:textColor="@android:color/white"
-        tools:text="@string/ipu_button_play_text"/>
+        android:onClick="playMedia"
+        android:text="@string/ipu_button_play_text"
+        android:textColor="@android:color/white"/>
 
     <VideoView
         android:id="@+id/hulaVideoView"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
+        android:layout_gravity="center"
         android:layout_weight="1"/>
 
     <Button
@@ -51,6 +53,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/turquoise_water"
-        android:textColor="@android:color/white"
-        tools:text="@string/hula_button_watch_text"/>
+        android:onClick="playMedia"
+        android:text="@string/hula_button_watch_text"
+        android:textColor="@android:color/white"/>
 </LinearLayout>

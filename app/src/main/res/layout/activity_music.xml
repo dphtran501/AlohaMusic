@@ -1,10 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="edu.orangecoastcollege.cs273.alohamusic.MusicActivity">
 
-</android.support.constraint.ConstraintLayout>
+    <ImageView
+        android:id="@+id/ukuleleImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:contentDescription="@string/ukulele_image_alt_text"
+        app:srcCompat="@drawable/ukulele"/>
+
+    <Button
+        android:id="@+id/ukuleleButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/turquoise_water"
+        android:textColor="@android:color/white"
+        tools:text="@string/ukulele_button_play_text"/>
+
+    <ImageView
+        android:id="@+id/ipuImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:contentDescription="@string/ipu_image_alt_text"
+        app:srcCompat="@drawable/ipu"/>
+
+    <Button
+        android:id="@+id/ipuButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/turquoise_water"
+        android:textColor="@android:color/white"
+        tools:text="@string/ipu_button_play_text"/>
+
+    <VideoView
+        android:id="@+id/hulaVideoView"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <Button
+        android:id="@+id/hulaButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/turquoise_water"
+        android:textColor="@android:color/white"
+        tools:text="@string/hula_button_watch_text"/>
+</LinearLayout>
